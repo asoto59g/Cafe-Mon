@@ -1,0 +1,16 @@
+{
+  "name": "ABC Coffee Monitoreo",
+  "short_name": "Coffee Mon",
+  "description": "Sistema de Monitoreo de Plagas en Café",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#3d2b1f",
+  "icons": [
+    {
+      "src": "appcafe.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

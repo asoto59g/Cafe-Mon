@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Plagueo en Café - ABC Geomática</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="appcafe.png">
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="bg-blobs"></div>
+    
+    <div class="app-container">
+        <header class="main-header">
+            <div class="logo">
+                <img src="logo.png" alt="ABC Logo" style="height: 32px; width: auto; margin-right: 10px;">
+            </div>
+            <div class="status-indicators">
+                <div class="indicator" id="gps-status">GPS: OFF</div>
+                <div class="indicator success" id="sync-status">SYNC: OK</div>
+            </div>
+        </header>
+
+        <main id="main-content" class="content-view">
+            <!-- Content injects here -->
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-view="dashboard">
+                <i class="nav-icon" data-lucide="layout-grid"></i>
+                <span class="nav-label">Hoy</span>
+            </button>
+            <button class="nav-item" data-view="admin">
+                <i class="nav-icon" data-lucide="settings"></i>
+                <span class="nav-label">Admin</span>
+            </button>
+            <button class="nav-item" data-view="records">
+                <i class="nav-icon" data-lucide="clipboard-list"></i>
+                <span class="nav-label">Registros</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="app.js?v=2.1"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('SW Registered', reg))
+                .catch(err => console.log('SW Failed', err));
+        }
+    </script>
+</body>
+</html>
