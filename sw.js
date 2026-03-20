@@ -1,4 +1,4 @@
-const CACHE_NAME = 'abc-coffee-cache-v2';
+const CACHE_NAME = 'abc-coffee-cache-v5';
 const assets = [
     './',
     './index.html',

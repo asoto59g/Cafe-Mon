@@ -1,7 +1,7 @@
 /**
  * Plagueo en Café - ABC Geomática
  * Premium PWA Monitoring System
- * Version 2.3 - Added Weeds Monitoring & Detailed Thresholds
+ * Version 2.7 - Restored Navigation Order & Debug
  */
 
 const APP_STATE = {
@@ -179,6 +179,7 @@ function renderView(viewName) {
     }
 
     APP_STATE.currentView = viewName;
+    console.log('[v2.7] Rendering View:', viewName);
     window.scrollTo(0, 0);
 
     switch (viewName) {
